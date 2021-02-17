@@ -4,3 +4,7 @@ ipykernel
 pandas
 scipy
 beautifulsoup4
+tensorflow==2.4.0
+keras==2.4.3
+keras-tuner==1.0.2
+tensorboard==2.4.1
