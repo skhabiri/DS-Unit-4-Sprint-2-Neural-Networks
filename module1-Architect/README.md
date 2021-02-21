@@ -134,3 +134,29 @@ baseline = model.fit(X, y,
                        )
 ```
 We get a validation accuracy of 10%. Not that great. Using adam optimizer increases the accuracy to about 0.2.
+
+### Libraries:
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from IPython.display import YouTubeVideo
+from sklearn.utils import shuffle
+
+
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras import initializers
+from tensorflow.keras import Sequential
+from tensorflow.keras.optimizers import SGD, Adam
+
+from tensorflow.keras.datasets import mnist
+
+import os
+import datetime
+from io import BytesIO
+import requests
+```
+
