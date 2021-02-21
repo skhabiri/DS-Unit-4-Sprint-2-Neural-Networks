@@ -49,8 +49,11 @@ for epoch in epochs:
 ### Normalizing data:
 Whenever all data is normalized to values within 0 and 1, that ensures that the update to all the weights are updated in equal proportions which can lead to quicker convergence on the optimal weight values. If your dataset's values range across multiple orders of magnitude (i.e.  101,  102,  103,  104 ), then gradient descent will update the weights in grossly uneven proportions.
 
-### Stochastic Gradient Descent:
-SGD refers to a random draw of a mini-batch size of some amount from the training set and updating the weights and bias and continuing that until the entire training set is consumed and that would account as one epoch.
+### Batch Gradient Descent:
+Strictly speaking, "Minibatch" Gradient Descent means that instead of passing all of our data through the network for a given epoch (Batch GD), we just pass a randomized portion of our data through the network for each epoch.
+Stochastic Gradient Descent is when we make updates to our weights after forward propagating each individual training observation.
+Batch GD refers to a random draw of a batch size from the training set and updating the weights and bias and continuing that until the entire training set is consumed and that would account as one epoch. 
+
 
 ### Batch Size:
 Batches are the number of observations our model is shown to make predictions and update the weights. Batches are selected randomly during epoch. All observations are considered when passing through an epoch at some point. 
