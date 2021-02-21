@@ -80,3 +80,23 @@ result = model.fit(X_train, y_train, epochs, batch_size, validation_data=(X_test
 With epoch=25, batch_size=32, Optimizer=SGD, we achieve an accuracy of 0.95. For this dataset batch_=4096 is as accurate as batch_size=8. For a given epoch, in general a smaller batch size tends to be more accurate as there are more back-propagation corrections and at the same time more time consuming. However a larger batch size tends to average out the noise in input samples and the validation curves tend to be smoother. In regards to learning rate, bigger numbers take large steps in large variance and could cause convergence issues. However, it could help with passing over local minimums. Small learning rates need a large number of epochs to train as the correction steps are small.
 
 The second notebook, ann_train-422a.ipynb, uses the same topology but for quickdraw dataset. X shape is (100K, 784) and X_test is 20% of the data. With SGD optimizer, 0.01 learning rate and batch_size=512 we get an accuracy of 0.84.
+
+### Libraries:
+```
+import tensorflow as tf
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.optimizers import *
+from tensorflow.keras import initializers
+
+from tensorflow.keras.datasets import mnist
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+import wget
+```
+
